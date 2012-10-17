@@ -72,7 +72,7 @@ body {
 	position:fixed;
 	top:0px;
 	width: 100%;
-	
+	border-bottom: 20px solid #000000;
 }
 .header-container + div {
 	margin-top: 69px;
@@ -90,8 +90,18 @@ body {
 	background: -ms-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+	
 }
-
+.header-container, .footer-container {
+	background-image: url('../images/svg/header-bg.svg');
+	-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+ .footer-container {
+	background-image: url('../images/svg/footer-bg.svg');
+}
 .title {
 	color: white;
 }
