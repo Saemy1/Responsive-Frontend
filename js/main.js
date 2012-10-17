@@ -10,6 +10,7 @@ $(document).ready(function(){
 	var hideMenuAction = new Responsive.HideMenuAction();
 	
 	showMenuAction.settings = {
+		navigationSelector:'nav.main-navigation',
 		hideButtonSelector: ".nav-bar-modal >  ul > li:first-child > a",
 		hideAction: hideMenuAction,
 	}

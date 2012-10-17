@@ -8,8 +8,9 @@
      * @extends Class
      */
 	Responsive.ShowMenuAction.DOMManipulator = Class.extend({  
-		appendNav : function(html, sender) {
-			var navbar = $(html);
+		
+		cloneNavigationToBeModal : function(selector, sender) {
+			var navbar = $(selector).clone().addClass("nav-bar-modal");
 			var body = $("body").append(navbar);
 			sender._navbar = navbar;
 			sender._setHideAction();

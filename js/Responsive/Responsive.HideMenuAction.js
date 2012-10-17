@@ -14,11 +14,14 @@
 		},
 		setClickHandlerOfElement: function(element) {
 			var self = this;
-			$(element).click(function(event){
-				event.preventDefault();
-				$(self.settings.elementToHide).hide();
-				
-			});
+			
+			$(element).click({elementToHide: self.settings.elementToHide}, self._handleClick);
+		},
+		
+		_handleClick: function(event) {
+			event.preventDefault();
+			var elementToHide = event.data.elementToHide;
+			$(elementToHide).hide();
 		}
 	});  
 })($); 

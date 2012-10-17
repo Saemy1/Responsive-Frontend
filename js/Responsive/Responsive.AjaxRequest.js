@@ -8,6 +8,7 @@
      * @extends Class
      */
 	Responsive.AjaxRequests = Class.extend({  
+		
 		requestNavigation: function(callback,absender) {
 			var sender = absender;
 			$.ajax({

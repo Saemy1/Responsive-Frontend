@@ -13,6 +13,7 @@
 		_dommanipulator: null,
 		
 		settings: {
+			navigationSelector:'',
 			hideButtonSelector:'',
 			hideAction:null
 		},
@@ -29,19 +30,18 @@
 		
 		_loadNavigation:  function() {
 			if(this._navbar===null) {
-				this._sendLoadNavigationAjaxRequest();
+				this._cloneNavigationToBeModal();
 			} else {
 				this._showNavigation();
 			}
 		},
 		
-		_sendLoadNavigationAjaxRequest: function() {
-			var request = new Responsive.AjaxRequests()
+		_cloneNavigationToBeModal: function() {
 			this._checkAndInitDomManiuplator();
-			request.requestNavigation(this._dommanipulator.appendNav,this);
+			this._dommanipulator.cloneNavigationToBeModal(this.settings.navigationSelector, this);
 		
 		},
-		
+			
 		_checkAndInitDomManiuplator: function() {
 			if(this._dommanipulator === null) {
 				this._dommanipulator = new Responsive.ShowMenuAction.DOMManipulator();
