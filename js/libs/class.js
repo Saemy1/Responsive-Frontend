@@ -17,6 +17,7 @@
         // don't run the init constructor)
         initializing = true;
         var prototype = new this();
+        var props;
         initializing = false;
         
         // Copy the properties over onto the new prototype

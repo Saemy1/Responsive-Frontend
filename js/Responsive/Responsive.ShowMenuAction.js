@@ -6,16 +6,22 @@
      * @namespace Responsive
      * @class ShowMenuAction
      * @extends Class
+     * 
+     * Settings {
+     * 	navigationSelector : '',
+     * 	hideButtonSelector : '',
+     *  hideAction : null
+     * }
      */
 	Responsive.ShowMenuAction = Class.extend({  
 		
+		
 		_navbar: null,
 		_dommanipulator: null,
+		_settings: null,
 		
-		settings: {
-			navigationSelector:'',
-			hideButtonSelector:'',
-			hideAction:null
+		init: function(settings) {
+			this._settings = settings;
 		},
 		
 		setClickHandlerOfElement: function(element) {
@@ -24,40 +30,40 @@
 			
 			$(element).click(function(event){
 				event.preventDefault();
-				self._loadNavigation();
+				self.loadNavigation();
 			});
 		},
 		
-		_loadNavigation:  function() {
+		loadNavigation:  function() {
 			if(this._navbar===null) {
-				this._cloneNavigationToBeModal();
+				this.cloneNavigationToBeModal();
 			} else {
-				this._showNavigation();
+				this.showNavigation();
 			}
 		},
 		
-		_cloneNavigationToBeModal: function() {
-			this._checkAndInitDomManiuplator();
-			this._dommanipulator.cloneNavigationToBeModal(this.settings.navigationSelector, this);
+		cloneNavigationToBeModal: function() {
+			this.checkAndInitDomManiuplator();
+			this._dommanipulator.cloneNavigationToBeModal(this._settings.navigationSelector, this);
 		
 		},
 			
-		_checkAndInitDomManiuplator: function() {
+		checkAndInitDomManiuplator: function() {
 			if(this._dommanipulator === null) {
 				this._dommanipulator = new Responsive.ShowMenuAction.DOMManipulator();
 			}
 		},
 		
-		_setHideAction: function() {
+		setHideAction: function() {
 			var self = this;
-			if(this.settings.hideButtonSelector!=='' && this.settings.hideAction !== null) {
-				$(this.settings.hideButtonSelector).each(function(){
-					self.settings.hideAction.setClickHandlerOfElement(this);
+			if(this._settings.hideButtonSelector!=='' && this._settings.hideAction !== null) {
+				$(this._settings.hideButtonSelector).each(function(){
+					self._settings.hideAction.setClickHandlerOfElement(this);
 				});
 			}
 		},
 		
-		_showNavigation: function() {
+		showNavigation: function() {
 			this._navbar.show();
 		}
 		

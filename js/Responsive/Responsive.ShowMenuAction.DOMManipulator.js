@@ -13,7 +13,7 @@
 			var navbar = $(selector).clone().addClass("nav-bar-modal");
 			var body = $("body").append(navbar);
 			sender._navbar = navbar;
-			sender._setHideAction();
+			sender.setHideAction();
 		}
 	});  
 })($); 
