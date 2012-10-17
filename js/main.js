@@ -15,7 +15,7 @@ $(document).ready(function(){
 	var settings = {
 		navigationSelector:'nav.main-navigation',
 		hideButtonSelector: ".nav-bar-modal >  ul > li:first-child > a",
-		hideAction: hideMenuAction,
+		hideAction: hideMenuAction
 	}
 	
 	var showMenuAction = new Responsive.ShowMenuAction(settings);
