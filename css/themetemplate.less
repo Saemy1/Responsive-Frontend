@@ -1,0 +1,37 @@
+/* ===================
+ Themetemplate
+ =================== */
+
+.header-container {
+  position:fixed;
+  top:0px;
+  width: 100%;
+  border-bottom: 20px solid @theme-border-color;
+}
+.header-container + div {
+  margin-top: 69px;
+}
+.footer-container, .main aside {
+  border-top: 20px solid @theme-border-color;
+}
+
+.header-container, .footer-container, .main aside {
+  .background-gradient(@theme-header-background-gradient-color-stop1,@theme-header-background-gradient-color-stop2,@theme-header-background-gradient-color-stop3) ;
+}
+.header-container, .footer-container {
+  background-image: url('../images/svg/header-bg.svg');
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+ .footer-container {
+  background-image: url('../images/svg/footer-bg.svg');
+}
+.title {
+  color: @theme-title-color;
+}
+
+section {
+   .background-gradient(@theme-header-background-gradient-color-stop1,@theme-header-background-gradient-color-stop2,@theme-header-background-gradient-color-stop3) ;
+}
