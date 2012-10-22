@@ -1,0 +1,6 @@
+.darkenOrLightenForecolor(@color, @alpha) when (lightness(@color) >= 50%) {
+  color: darken(@color, @alpha);
+}
+.darkenOrLightenForecolor(@color, @alpha) when (lightness(@color) < 50%) {
+  color: lighten(@color, @alpha);
+}

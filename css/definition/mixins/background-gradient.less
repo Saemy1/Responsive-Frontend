@@ -8,10 +8,3 @@
     background: linear-gradient(to bottom,  @stop1 0%,@stop2 44%,@stop3 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
 }
-
-.darkOrLightForecolor(@color) when (lightness(@color) >= 50%) {
-  color: black;
-}
-.darkOrLightForecolor(@color) when (lightness(@color) < 50%) {
-  color: white;
-}

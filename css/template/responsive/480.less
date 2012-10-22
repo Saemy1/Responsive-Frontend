@@ -1,0 +1,61 @@
+
+/* ==========================================================================
+ Media Queries
+ ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+  /* ====================
+   INTERMEDIATE: Menu
+   ==================== */
+
+  nav {
+    display: block;
+  }
+  
+  nav a {
+    float: left;
+    width: 19%;
+    margin: 0 1.33%;
+    padding: 5px 2%;
+    margin-bottom: 0;
+  }
+
+  nav li {
+    display: inline;
+  }
+  
+  nav li:first-child {
+    display: none;
+  }
+  
+  nav li:nth-child(2) a {
+    margin-left: 0;
+  }
+
+  nav li:last-child a {
+    margin-right: 0;
+  }
+
+  .nav-bar-modal, .menu-button {
+    display: none !important;
+  }
+  /* ========================
+   INTERMEDIATE: IE Fixes
+   ======================== */
+
+  nav ul li {
+    display: inline;
+  }
+
+  .oldie nav a {
+    margin: 0 0.7%;
+  }
+  
+  /* ===============
+   Head
+   =============== */
+  .header-container + div {
+    margin-top: 109px;
+  }
+}

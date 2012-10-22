@@ -15,12 +15,12 @@ nav a {
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: white;
-  background: #000;
+  .darkOrLightForecolor(@theme-navigation-background-color);
+  background: @theme-navigation-background-color;
 }
 
 nav a:hover, nav a:visited {
-  color: white;
+  .darkenOrLightenForecolor(@theme-navigation-background-color, 50%);
 }
 
 nav a:hover {

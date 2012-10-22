@@ -1,0 +1,6 @@
+.darkOrLightForecolor(@color) when (lightness(@color) >= 50%) {
+  color: black;
+}
+.darkOrLightForecolor(@color) when (lightness(@color) < 50%) {
+  color: white;
+}
